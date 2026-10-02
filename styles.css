@@ -1,0 +1,207 @@
+/* Orbital Minimalism, Lunar palette. No external fonts or assets. */
+:root {
+  color-scheme: light;
+  --ice-white: #edeef0;
+  --void-black: #02040b;
+  --midnight-navy: #161d32;
+  --orbital-blue: #465377;
+  --halo-blue: #6a7cac;
+  --lunar-gray: #d8dadf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--ice-white);
+  color: var(--midnight-navy);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.page {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 5rem 3rem 3.5rem;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  color: var(--void-black);
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: var(--orbital-blue);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+a {
+  color: var(--orbital-blue);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+}
+
+a:hover {
+  color: var(--void-black);
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--orbital-blue);
+  outline-offset: 5px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 14rem;
+  align-items: start;
+  gap: 3rem;
+}
+
+.headline {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.specialization {
+  margin-top: 0.3rem;
+  color: var(--orbital-blue);
+  line-height: 1.5;
+}
+
+.biography {
+  max-width: 65ch;
+  margin-top: 1.75rem;
+}
+
+.cv-link {
+  display: inline-block;
+  margin-top: 1.75rem;
+  padding: 0.65rem 1.1rem;
+  border: 1px solid var(--midnight-navy);
+  border-radius: 3px;
+  background: var(--midnight-navy);
+  color: var(--ice-white);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cv-link:hover {
+  background: var(--orbital-blue);
+  border-color: var(--orbital-blue);
+  color: var(--ice-white);
+}
+
+.file-type {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.portrait-frame {
+  position: relative;
+  width: 14rem;
+  padding: 1rem;
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+/* One original arc frames the portrait; it is purely decorative. */
+.orbital-arc {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--halo-blue);
+  stroke-width: 1;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.research-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 3rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--lunar-gray);
+}
+
+.role {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.location {
+  margin-top: 0.75rem;
+  color: var(--orbital-blue);
+}
+
+.contact {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--lunar-gray);
+}
+
+.email {
+  overflow-wrap: anywhere;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.profile-links a {
+  display: inline-block;
+  padding: 0.35rem 0;
+}
+
+@media (max-width: 44rem) {
+  .page {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .portrait-frame {
+    grid-row: 1;
+    width: 10rem;
+    padding: 0.75rem;
+  }
+
+  .research-details {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+}
