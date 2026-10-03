@@ -11,6 +11,10 @@ The only JavaScript is a small inline handler for the Email action.
 - `styles.css` — responsive layout and a light Orbital Minimalism palette.
 - `assets/DSC06850.jpg` — outdoor homepage portrait, with embedded personal metadata removed.
 - `assets/portrait.jpg` — retained professional portrait, with embedded metadata removed.
+- `assets/favicon.svg` — primary orbital favicon.
+- `assets/favicon-32.png` — 32px PNG favicon fallback, rendered from the SVG.
+- `assets/apple-touch-icon.png` — 180px touch icon using the same SVG on an opaque navy background.
+- `assets/social-preview.jpg` — 1200 × 630 sharing image using the current outdoor portrait.
 - `files/Pavel_Mosharev_CV_EN.pdf` — current public English CV.
 - `files/Pavel_Mosharev_CV_ZH.pdf` — current frozen public Chinese CV.
 - `.nojekyll` — serve the static files without Jekyll processing.
@@ -74,6 +78,44 @@ no horizontal overflow. Browser fixtures and screenshots are outside this reposi
 GitHub, Google Scholar, and ORCID returned HTTP 200. LinkedIn returned HTTP 999
 to the automated request; its URL matches the public CV but should be opened manually.
 No Python environment, packages, or build tooling were used.
+
+## Favicon and sharing assets
+
+Added on 3 October 2026 using the existing Orbital Minimalism v1.1 guide and
+homepage palette. The favicon uses Midnight Navy `#161D32`, an Ice White
+`#EDEEF0` open orbital arc, and one Halo Blue `#6A7CAC` node. The sharing image
+also uses Void Black `#02040B` for the name and Orbital Blue `#465377` for the
+specialization. No design-system source assets or fonts were copied.
+
+The preview was composed locally in installed Chrome using an sRGB canvas,
+Arial text, the existing `assets/DSC06850.jpg`, and one subtle Halo Blue arc.
+The 360px square portrait uses the homepage's 50%/60% positioning and 1.15 zoom:
+source crop `(166.30435, 206.50435, 2217.39130, 2217.39130)` from the 2550 × 2617
+photo. It is placed at `(756, 135)` with 16px rounded corners. The name, role,
+and specialization use 56px semibold, 28px regular, and 24px regular Arial.
+The JPEG uses encoder quality 0.88 and occupies 53,656 bytes (52.4 KiB).
+Unnecessary APP metadata was removed without changing compressed image data;
+only the minimal JFIF header remains. Both PNGs contain only image chunks.
+
+The head declares the canonical homepage URL, SVG and PNG favicon links, the
+touch icon, Open Graph website fields, and a Twitter/X large-image card.
+Image dimensions/type and descriptive image alt text are included. Sharing URLs
+are absolute. No X account fields are declared. The existing meta description,
+page body, and stylesheet remain unchanged.
+
+Validation used installed Windows Chrome and Node.js v18.19.1, without Python,
+package installation, or downloads. Commands included
+`bash /tmp/orbital-sharing-validation/render.sh`,
+`bash /tmp/orbital-sharing-validation/validate-browser.sh`,
+`node /tmp/orbital-sharing-validation/strip-jpeg-metadata.cjs`,
+`node /tmp/orbital-sharing-validation/check.cjs`, and `git diff --check`.
+Temporary fixtures and screenshots live outside the repository. Checks cover
+browser asset loading, 16/32px rendering, exact metadata, local paths, HTML
+nesting and IDs, unchanged body/description, image dimensions, and PNG/JPEG
+metadata. The social image was visually inspected at 1200 × 630 and 600 × 315.
+The isolated non-headless Chrome check produced no inspectable window, so actual
+visible-tab display remains unverified; headless browser loading and small-size
+icon rendering passed.
 
 ## Updating
 
