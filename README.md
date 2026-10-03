@@ -7,6 +7,7 @@ The only JavaScript is a small inline handler for the Email action.
 ## Files
 
 - `index.html` — public biography, affiliation, research interests, contact and profile links.
+- `content/about.md` — editable autobiography text for the About section.
 - `styles.css` — responsive layout and a light Orbital Minimalism palette.
 - `assets/DSC06850.jpg` — outdoor homepage portrait, with embedded personal metadata removed.
 - `assets/portrait.jpg` — retained professional portrait, with embedded metadata removed.
@@ -49,7 +50,8 @@ and read-only for this website work:
 - The four profile URLs match the public CV and the verified records in
   `career_profile/data/profiles.yaml`.
 
-The homepage uses only the public CV's professional facts and public email.
+The homepage's professional facts and public email follow the public CV;
+the autobiographical About section follows `content/about.md`.
 The completed visiting appointment is not presented as a current affiliation.
 No canonical data files, private contacts, build intermediates, or source archives
 are included here. The PDF's public content and metadata and the portrait's
@@ -76,8 +78,11 @@ No Python environment, packages, or build tooling were used.
 ## Updating
 
 Edit the text and links directly in `index.html`, and adjust appearance in
-`styles.css`. Keep facts aligned with the current public English CV. Replace the
-PDFs at the same local filenames when new public exports are available. Use only an
-approved portrait and remove embedded personal metadata from future photo copies.
+`styles.css`. The editable autobiography text lives in `content/about.md`; when
+it changes, update the About section in `index.html` to match. There is deliberately
+no Markdown build system yet. Keep facts aligned with the current public English
+CV. Replace the PDFs at the same local filenames when new public exports are
+available. Use only an approved portrait and remove embedded personal metadata
+from future photo copies.
 Review the page and PDF for private information, check every link, and test a narrow
 window after updates. Keep v0.1 as a small static page.

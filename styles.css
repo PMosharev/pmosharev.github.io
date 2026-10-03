@@ -179,10 +179,19 @@ a:focus-visible,
   color: var(--orbital-blue);
 }
 
+.about,
 .contact {
   margin-top: 2.5rem;
   padding-top: 2rem;
   border-top: 1px solid var(--lunar-gray);
+}
+
+.about p {
+  max-width: 48rem;
+}
+
+.about p + p {
+  margin-top: 1.25rem;
 }
 
 .email {
