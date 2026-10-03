@@ -1,21 +1,29 @@
 # Pavel Mosharev — personal website v0.1
 
 A single English homepage for GitHub Pages, written in semantic HTML and CSS.
-There is no build step, JavaScript, framework, analytics, or external asset dependency.
+There is no build step, framework, analytics, or external asset dependency.
+The only JavaScript is a small inline handler for the Email action.
 
 ## Files
 
 - `index.html` — public biography, affiliation, research interests, contact and profile links.
 - `styles.css` — responsive layout and a light Orbital Minimalism palette.
-- `assets/portrait.jpg` — approved professional portrait, with embedded metadata removed.
+- `assets/DSC06850.jpg` — outdoor homepage portrait, with embedded personal metadata removed.
+- `assets/portrait.jpg` — retained professional portrait, with embedded metadata removed.
 - `files/Pavel_Mosharev_CV_EN.pdf` — current public English CV.
+- `files/Pavel_Mosharev_CV_ZH.pdf` — current frozen public Chinese CV.
 - `.nojekyll` — serve the static files without Jekyll processing.
 
 ## Preview
 
 Open `index.html` in a browser. Relative links also work directly from the filesystem;
 no server or package installation is needed. Check both a wide window and a narrow
-mobile-sized window, and open the CV link before publishing.
+mobile-sized window, and open both CV links before publishing. The Email button
+requires JavaScript and supports mouse and native keyboard activation. Its click
+handler assembles the address from separate pieces and opens a normal `mailto:`
+link. This discourages trivial static scraping; it is not strong bot protection,
+and the public CVs still contain the public email. With JavaScript disabled, the
+button has no effect.
 
 For GitHub Pages, select **Deploy from a branch** in the repository's Pages settings
 and choose the publishing branch and **/ (root)** folder.
@@ -27,7 +35,14 @@ and read-only for this website work:
 
 - Editorial reference: `career_profile/cv/public_en.md`.
 - PDF source: `career_profile/output/public_en/public_en.pdf`, copied unchanged.
-- Photo source: `career_profile/assets/photos/pavel_mosharev_cn.jpg`, identified as
+- Chinese PDF source: `career_profile/output/public_cn/public_cn.pdf`, copied
+  unchanged from the current frozen public export on 3 October 2026.
+- Homepage photo: the outdoor `assets/DSC06850.jpg` supplied in this website
+  repository. EXIF/XMP, Photoshop/IPTC, and Ducky metadata segments were removed
+  without re-encoding; compressed image data and the Adobe color-transform marker
+  were preserved. A broad square CSS crop keeps the outdoor setting and upper
+  body inside the existing circular frame and orbital arc.
+- Retained professional photo source: `career_profile/assets/photos/pavel_mosharev_cn.jpg`, identified as
   an approved portrait by its accompanying README. The local copy retains the
   original JPEG image data; EXIF/XMP, comment, and editorial metadata segments
   were removed for public distribution.
@@ -62,7 +77,7 @@ No Python environment, packages, or build tooling were used.
 
 Edit the text and links directly in `index.html`, and adjust appearance in
 `styles.css`. Keep facts aligned with the current public English CV. Replace the
-PDF at the same local filename when a new public export is available. Use only an
+PDFs at the same local filenames when new public exports are available. Use only an
 approved portrait and remove embedded personal metadata from future photo copies.
 Review the page and PDF for private information, check every link, and test a narrow
 window after updates. Keep v0.1 as a small static page.

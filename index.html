@@ -20,13 +20,16 @@
             numerical experiments. My background spans theoretical physics,
             university teaching, and industrial algorithm R&amp;D at Huawei.
           </p>
-          <a class="cv-link" href="files/Pavel_Mosharev_CV_EN.pdf">View English CV <span class="file-type">(PDF)</span></a>
+          <div class="cv-actions">
+            <a class="cv-link" href="files/Pavel_Mosharev_CV_EN.pdf">View English CV <span class="file-type">(PDF)</span></a>
+            <a class="cv-link" href="files/Pavel_Mosharev_CV_ZH.pdf">View Chinese CV <span class="file-type">(PDF)</span></a>
+          </div>
         </div>
         <div class="portrait-frame">
           <svg class="orbital-arc" viewBox="0 0 260 260" aria-hidden="true" focusable="false">
             <path d="M 38 53 A 120 120 0 0 1 243 171" />
           </svg>
-          <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Pavel Mosharev" width="1641" height="1641">
+          <img class="portrait" src="assets/DSC06850.jpg" alt="Pavel Mosharev outdoors by the waterfront" width="2550" height="3300">
         </div>
       </header>
 
@@ -49,7 +52,7 @@
 
       <section class="contact" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contact &amp; profiles</h2>
-        <a class="email" href="mailto:pavelmosharev@outlook.com">pavelmosharev@outlook.com</a>
+        <button class="email" id="email-action" type="button">Email</button>
         <nav aria-label="Professional profiles">
           <ul class="profile-links">
             <li><a href="https://scholar.google.com/citations?user=w8X1RE0AAAAJ&amp;hl=en">Google Scholar</a></li>
@@ -60,5 +63,10 @@
         </nav>
       </section>
     </main>
+    <script>
+      document.getElementById('email-action').addEventListener('click', function () {
+        window.location.href = 'mailto:' + ['pavel', 'mosharev'].join('') + '@' + ['outlook', 'com'].join('.');
+      });
+    </script>
   </body>
 </html>
