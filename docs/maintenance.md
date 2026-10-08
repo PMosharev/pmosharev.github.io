@@ -12,7 +12,7 @@ no build step, framework, package manifest, analytics, or external asset depende
 | [`styles.css`](../styles.css) | Responsive layout and Orbital Minimalism colors. |
 | [`content/about.md`](../content/about.md) | Editorial source for the About section; copied into HTML manually. |
 | `assets/` | Homepage photo (`DSC06850.jpg`), retained professional portrait (`portrait.jpg`), favicon files, touch icon, and sharing image. |
-| `files/` | Public English and Chinese CV PDFs. |
+| `files/` | Public English, Chinese, and Russian CV PDFs. |
 | [`.nojekyll`](../.nojekyll) | Bypasses Jekyll processing for static hosting. |
 | [`README.md`](../README.md) | Public introduction and documentation links. |
 | [`AGENTS.md`](../AGENTS.md) | Recurring instructions for coding agents. |
@@ -33,7 +33,8 @@ the filesystem; no server or package installation is needed.
 - Align professional facts, public email, and profile links with the approved
   public English CV. Keep completed appointments distinct from current affiliations.
 - Replace CVs with approved public exports at the existing filenames:
-  `files/Pavel_Mosharev_CV_EN.pdf` and `files/Pavel_Mosharev_CV_ZH.pdf`.
+  `files/Pavel_Mosharev_CV_EN.pdf`, `files/Pavel_Mosharev_CV_ZH.pdf`, and
+  `files/Pavel_Mosharev_CV_RU.pdf`.
 - Use approved photos and remove embedded personal metadata from future copies.
   Review both visible content and embedded metadata in PDFs and images before
   publishing. Keep private contacts, source archives, and build intermediates out
@@ -43,7 +44,7 @@ the filesystem; no server or package installation is needed.
 
 Before publishing site changes, inspect a desktop window and narrow viewports
 (320px and 390px), check for horizontal overflow, test keyboard focus and Email
-activation, open both PDFs, and check contact and profile links. For asset or
+activation, open all three PDFs, and check contact and profile links. For asset or
 metadata changes, check favicon loading and sharing image paths, dimensions, and
 descriptions. Run `git diff --check` and review the diff for unintended changes.
 There is no committed automated test suite.
@@ -66,6 +67,8 @@ read-only for website work.
   `career_profile/output/public_en/public_en.pdf`. The Chinese PDF was copied
   unchanged on 3 October 2026 from the frozen public export at
   `career_profile/output/public_cn/public_cn.pdf`.
+  The Russian PDF was copied unchanged on 8 October 2026 from the approved public
+  export at `career_profile/output/public_ru/public_ru.pdf`.
 - **Photos:** `assets/DSC06850.jpg` was supplied in this repository.
   `assets/portrait.jpg` came from the approved photo at
   `career_profile/assets/photos/pavel_mosharev_cn.jpg`. Personal and editorial

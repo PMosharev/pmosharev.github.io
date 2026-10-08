@@ -2,7 +2,7 @@
 
 Personal website of Pavel Mosharev, a physicist and algorithm researcher working
 on quantum and quantum-inspired optimization. Includes a biography, research
-interests, professional profiles, and English and Chinese CVs.
+interests, professional profiles, and English, Chinese, and Russian CVs.
 
 **[Visit the website](https://pmosharev.github.io/)**
 
